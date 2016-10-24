@@ -9,19 +9,16 @@
  };
 
 // GLOBAL CHARTS OPTIONS
-
 Chart.defaults.global.defaultFontFamily = "'Nunito', Helvetica, Arial, sans-serif";
 Chart.defaults.global.maintainAspectRatio = false;
 Chart.defaults.global.responsive = true;
 Chart.defaults.bar.scaleShowVerticalLines = false;
 
- // ------------------------------------------------------
- // LINE CHARTS
- // ------------------------------------------------------
+ /* ------------------------------------------------------
+   LINE CHARTS
+ ------------------------------------------------------ */
 
- // Hourly, Daily, Weekly and Monthly Datasets for line charts
-
- var hourly_data = {
+ var hourlyData = { // Hourly dataset
      labels: ['12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00'],
      datasets: [
          {
@@ -37,7 +34,7 @@ Chart.defaults.bar.scaleShowVerticalLines = false;
  };
 
 
-var daily_data = {
+var dailyData = { // Daily dataset
     labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
     datasets: [
         {
@@ -52,7 +49,7 @@ var daily_data = {
     ]
 };
 
-var weekly_data = {
+var weeklyData = { // Weekly dataset
   labels: ['16-22','23-29','30-5','6-12','13-19','20-26','27-3','4-10','11-17','18-24','25-31'],
   datasets: [
       {
@@ -67,7 +64,7 @@ var weekly_data = {
   ]
 };
 
-var monthly_data = {
+var monthlyData = { // Monthly dataset
   labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov', 'Dec'],
   datasets: [
       {
@@ -82,8 +79,8 @@ var monthly_data = {
   ]
 };
 
-var line_chart_area = document.getElementById("web-traffic-line-chart").getContext('2d');
-var line_chart = new Chart(line_chart_area, {
+var lineChartArea = document.getElementById("web-traffic-line-chart").getContext('2d');
+var lineChart = new Chart(lineChartArea, {
     type: 'line',
     data: weekly_data,
     options: {
@@ -120,25 +117,25 @@ $("#datasets-options a").click(function(event) {
     // Update charts
      $("#hourly-btn").click(function(event) {
          event.preventDefault(event);
-         line_chart.config.data = hourly_data;
+         line_chart.config.data = hourlyData;
          line_chart.update();
      });
 
      $("#daily-btn").click(function(event) {
          event.preventDefault(event);
-         line_chart.config.data = daily_data;
+         line_chart.config.data = dailyData;
          line_chart.update();
      });
 
      $("#weekly-btn").click(function(event) {
          event.preventDefault(event);
-         line_chart.config.data = weekly_data;
+         line_chart.config.data = weeklyData;
          line_chart.update();
      });
 
      $("#monthly-btn").click(function(event) {
          event.preventDefault(event);
-         line_chart.config.data = monthly_data;
+         line_chart.config.data = monthlyData;
          line_chart.update();
      });
 
@@ -146,8 +143,8 @@ $("#datasets-options a").click(function(event) {
 // BAR CHARTS
 // ------------------------------------------------------
 
-var bar_chart_area = document.getElementById("daily-traffic-bar-chart");
-var bar_chart = new Chart(bar_chart_area, {
+var barChartArea = document.getElementById("daily-traffic-bar-chart");
+var barChart = new Chart(barChartArea, {
     type: 'bar',
     data: {
         labels: ["S", "M", "W", "T", "T", "F", "S"],
@@ -179,8 +176,8 @@ var bar_chart = new Chart(bar_chart_area, {
 // DONUT (yummy) CHARTS
 // ------------------------------------------------------
 
-var donut_chart_area = document.getElementById("source-traffic-donut-chart");
-var donut_chart = new Chart(donut_chart_area, {
+var donutChartArea = document.getElementById("source-traffic-donut-chart");
+var donutChart = new Chart(donutChartArea, {
     type: 'doughnut',
     data: {
         labels: [
@@ -279,7 +276,7 @@ $('#btn-message-send').click(function(event){
 
 
 // AUTOCOMPLETE USER SEARCH
-var all_users = [
+var allUsers = [
       "London Woods",
       "Francine Wellington",
       "Marry Jane",
@@ -292,7 +289,7 @@ var all_users = [
       "Regis Detlaff"
 ];
 $( "#user-name-search" ).autocomplete({
-    source: all_users
+    source: allUsers
 });
 
 // LOCAL STORAGE FOR SETTINGS
@@ -316,16 +313,12 @@ if (profile_pref !== null) {
     $( "#profile-pref" ).prop( "checked", profile_pref );
 }
 
-// alert("in local storage: " + selected_tz + ", " + email_pref + ", " + profile_pref);
-
 // on save button click, update localstorage
 $( "#btn-settings-save" ).click(function(){
     // get selected value from timezone dropdown, email and profile preference
     selected_tz = $( "select#user-timezone option:selected").val();
     email_pref = $( "#email-pref" ).prop( "checked" );
     profile_pref = $( "#profile-pref" ).prop( "checked" );
-
-    // alert(selected_tz + ", " + email_pref + ", " + profile_pref);
 
     // update localstorage
     // for email and profile reference, remove the items if they are unchecked

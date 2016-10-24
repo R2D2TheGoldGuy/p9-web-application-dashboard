@@ -3,14 +3,14 @@
      display: true,
      position: "bottom",
      labels: {
-         fontFamily: 'Roboto, sans-serif',
+         fontFamily: 'Nunito, sans-serif',
          boxWidth: 10
      }
  };
 
 // GLOBAL CHARTS OPTIONS
 
-Chart.defaults.global.defaultFontFamily = "'Roboto', Helvetica, Arial, sans-serif";
+Chart.defaults.global.defaultFontFamily = "'Nunito', Helvetica, Arial, sans-serif";
 Chart.defaults.global.maintainAspectRatio = false;
 Chart.defaults.global.responsive = true;
 Chart.defaults.bar.scaleShowVerticalLines = false;
@@ -26,9 +26,9 @@ Chart.defaults.bar.scaleShowVerticalLines = false;
      datasets: [
          {
              data: [7000, 6000, 5500, 8000, 6500, 7000, 8000, 7000, 6000, 7500, 4500],
-             backgroundColor: 'rgba(88, 20, 181, 0.3)',
+             backgroundColor: 'rgba(255, 199, 135, 0.75)',
              lineTension: 0,
-             pointBorderColor: 'rgba(88, 20, 18, 0.8)',
+             pointBorderColor: 'rgba(255, 199, 135, 1)',
              pointRadius: 6,
              pointBorderWidth: 2,
              pointBackgroundColor: '#fff'
@@ -42,9 +42,9 @@ var daily_data = {
     datasets: [
         {
             data: [8000, 7500, 5500, 6500, 4500, 7500, 8000],
-            backgroundColor: 'rgba(74, 217, 217, 0.3)',
+            backgroundColor: 'rgba(44,132,247, 0.75)',
             lineTension: 0,
-            pointBorderColor: 'rgba(74, 217, 217, 0.8)',
+            pointBorderColor: 'rgba(44,132,247, 1)',
             pointRadius: 6,
             pointBorderWidth: 2,
             pointBackgroundColor: '#fff'
@@ -57,9 +57,9 @@ var weekly_data = {
   datasets: [
       {
           data: [5000, 8500, 9000, 6500, 6500, 5500, 7000, 8000, 4500, 6000, 4000],
-          backgroundColor: 'rgba(245, 165, 3, 0.3)',
+          backgroundColor: 'rgba(114, 255, 142, 0.75)',
           lineTension: 0,
-          pointBorderColor: 'rgba(245, 165, 3, 0.8)',
+          pointBorderColor: 'rgba(114, 255, 142, 1)',
           pointRadius: 6,
           pointBorderWidth: 2,
           pointBackgroundColor: '#fff'
@@ -72,9 +72,9 @@ var monthly_data = {
   datasets: [
       {
           data: [9000, 7500, 8500, 8500, 8500, 7500, 7000, 6500, 6500, 8500, 9500, 5000],
-          backgroundColor: 'rgba(242, 56, 90, 0.3)',
+          backgroundColor: 'rgba(186, 94, 94, 0.75)',
           lineTension: 0,
-          pointBorderColor: 'rgba(242, 56, 90, 0.8)',
+          pointBorderColor: 'rgba(186, 94, 94, 1)',
           pointRadius: 6,
           pointBorderWidth: 2,
           pointBackgroundColor: '#fff'
@@ -154,12 +154,12 @@ var bar_chart = new Chart(bar_chart_area, {
         datasets: [{
             label: 'AM',
             data: [15, 14, 20, 11, 16, 10, 13],
-            backgroundColor: '#2e6da4'
+            backgroundColor: '#80c98f'
         },
         {
             label: 'PM',
             data: [11, 15, 22, 30, 12, 8, 22],
-            backgroundColor: '#e74c3c'//'#b14843'
+            backgroundColor: '#7376be'
         }]
     },
     options: {
@@ -193,16 +193,16 @@ var donut_chart = new Chart(donut_chart_area, {
             {
                 data: [300, 50, 100, 20],
                 backgroundColor: [
-                    "#2e6da4",
-                    "#2c3e50",
-                    "#e74c3c",
-                    "#3498db"
+                    "#2C84F7",
+                    "#FFC787",
+                    "#72FF8E",
+                    "#BA5E5E"
                 ],
                 hoverBackgroundColor: [
-                    "#2e6da4",
-                    "#2c3e50",
-                    "#e74c3c",
-                    "#3498db"
+                    "rgba(44, 132, 247, 0.8)",
+                    "rgba(255, 199, 135, 0.8)",
+                    "rgba(114, 255, 142, 0.8)",
+                    "rgba(186, 94, 94, 0.8)"
                 ]
             }]
 
@@ -213,7 +213,7 @@ var donut_chart = new Chart(donut_chart_area, {
             display: true,
             position: "bottom",
             labels: {
-                fontFamily: 'Roboto, sans-serif',
+                fontFamily: 'Nunito, sans-serif',
                 boxWidth: 10
             }
         }
@@ -233,12 +233,12 @@ $( "#notif-dialog" ).dialog({
     autoOpen: false,
     modal: true,
     show: {
-        effect: "fade",
-        duration: 150
+        effect: "fadeIn",
+        duration: 350
     },
     hide: {
-        effect: "fade",
-        duration: 150
+        effect: "fadeOut",
+        duration: 350
     },
     	position: {
     		my: "center",
@@ -258,15 +258,15 @@ $("#notif-button").click(function(){
 $('#btn-message-send').click(function(event){
     event.preventDefault(event);
     if($.trim($('#user-message').val()) === '' || $.trim($('#user-name-search').val()) === ''){
-        $( "#message-form-alert" ).css('background-color', '#ffdb99');
+        $( "#message-form-alert" ).css('background-color', '#FFC787');
         $( "#message-form-alert" ).html('Username and message are required!')
              .fadeIn( "fast" );
    } else {
     // Show success message, fade in then fade out
-        $( "#message-form-alert" ).css('background-color', '#5fba7d');
+        $( "#message-form-alert" ).css('background-color', '#80c98f');
         $( "#message-form-alert" ).html('Message sent!')
-            .fadeIn( "fast" )
-            .delay(1000)
+            .fadeIn("fast")
+            .delay(1400)
             .fadeOut('slow');
 
         // clear the textfields
@@ -280,16 +280,16 @@ $('#btn-message-send').click(function(event){
 
 // AUTOCOMPLETE USER SEARCH
 var all_users = [
-      "Miranda Lawson",
-      "Evie Fyre",
-      "Piper Wright",
-      "Nick Valentine",
-      "Varric Tethras",
-      "Cullen Rutherford",
-      "Cassandra Pentaghast",
-      "John Shepard",
-      "Liara",
-      "Ezio Auditore"
+      "London Woods",
+      "Francine Wellington",
+      "Marry Jane",
+      "Peter Parker",
+      "Tyrone Chambers",
+      "Caesar Jackson",
+      "Michael Jackson",
+      "Eric Cartman",
+      "Tai Lopez",
+      "Regis Detlaff"
 ];
 $( "#user-name-search" ).autocomplete({
     source: all_users

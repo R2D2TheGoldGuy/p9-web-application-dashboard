@@ -224,7 +224,7 @@ var donut_chart = new Chart(donut_chart_area, {
 
 // CLOSE ALERT DIV ON CLICK
  $("#alert-dismiss").click(function() {
-     $("#alert").fadeOut("slow");
+     $("#alert-box").fadeOut("slow");
  });
 
 

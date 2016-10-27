@@ -4,5 +4,5 @@ The goal of this project is to create a responsive dashboard using best practice
 
 - I used a JavasScript library called charts.js, they helped me embed good looking charts on the website.
 - time taken is about 1 week due to me being stuck at certain parts like how to swap datasets around and trying to make the canvas more responsive. Also refining lots of small details.
-- Cross browser compatibility tested in Google Chrome, Firefox and IE Edge
+- Cross browser compatibility tested in Google Chrome, Firefox and IE Edge etc.
 - I used Sass in the beginning and then converted it to CSS at the end for this project, it certainly speeds up the process.

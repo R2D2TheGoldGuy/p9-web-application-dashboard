@@ -1,10 +1,8 @@
-# Project 9 - Responsive Web Application Dashboard
-attempting to recreate a responsive dashboard with fancy charts and stuff
+#Project 9 - Responsive Web Application Dashboard
 
-- used Sass for this project. Makes styling the CSS so so much easier..
-- the chart library used is Charts.js
-- time taken is about ~1 week due to me being stuck at certain parts like how to swap datasets around and trying to make the canvas more responsive. Also refining lots of small details
-- tested in: Safari Version 9.1.1 (10601.6.17), Chrome Version 50.0.2661.102 (64-bit) and Firefox Version 46.0.1
+The goal of this project is to create a responsive dashboard using best practices and following industry standards. Its also wise to utilize 3rd party libraries and take advantage of all the cool features available on the web.
 
-Notes:
-- Should cater for every (as in literally EVERY) screensizes possible, including the 4k ones (2560px). A graceful way to do it is to align main container in the center and set a nice max-width e.g. at 1440px or so.
+- I used a JavasScript library called charts.js, they helped me embed good looking charts on the website.
+- time taken is about 1 week due to me being stuck at certain parts like how to swap datasets around and trying to make the canvas more responsive. Also refining lots of small details.
+- Cross browser compatibility tested in Google Chrome, Firefox and IE Edge etc.
+- I used Sass in the beginning and then converted it to CSS at the end for this project, it certainly speeds up the process.

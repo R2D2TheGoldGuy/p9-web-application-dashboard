@@ -147,7 +147,7 @@ canvas {
   .top-logo {
     align-self: center;
     margin-left: 30px;
-    font-size: 1.75em;
+    font-size: 1.625em;
   }
     @media only screen and (min-width: 768px) {
       .top-logo {
@@ -167,7 +167,7 @@ canvas {
         padding: 0px;
         width: 42px;
         height: auto;
-        margin: 5px 0px 0 20px;
+        margin: 5px 0 0 15px;
       }
     }
   .top-user-name {
@@ -210,7 +210,7 @@ canvas {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      padding: 15px;
+      padding: 10px;
     }
   }
 

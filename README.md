@@ -1,8 +1,7 @@
 #Project 9 - Responsive Web Application Dashboard
 
-The goal of this project is to create a responsive dashboard using best practices and following industry standards. Its also wise to utilize 3rd party libraries and take advantage of all the cool features available on the web.
+Main Objective: In this project, you'll take a mockup and a few icons and build a stunning, web dashboard complete with JavaScript-driven charts and graphs. You only need to take the design and create the HTML, CSS and JavaScript functionality for this one page. You don't create other pages, or build any backend or database functionality. The goal of this project is to create a responsive dashboard using best practices and following industry standards. Its also wise to utilize 3rd party libraries and take advantage of all the cool features available on the web.
 
-- I used a JavasScript library called charts.js, they helped me embed good looking charts on the website.
-- time taken is about 1 week due to me being stuck at certain parts like how to swap datasets around and trying to make the canvas more responsive. Also refining lots of small details.
-- Cross browser compatibility tested in Google Chrome, Firefox and IE Edge etc.
-- I used Sass in the beginning and then converted it to CSS at the end for this project, it certainly speeds up the process.
+Many websites do more than just give information. Sites like Github, Zillow, Mint and Treehouse let users do things. They act like programs you run on your computer. These web applications, often include pages for looking at your profile, what you've done in the week or what you need to get done. These "dashboards" act like your control panel for controlling the web app.
+
+Note: These projects are intended to train you in HTML, CSS and JavaScript, and let you practice and show your mastery of these fundamental building blocks of the web. Because of that, please avoid using frameworks like Bootstrap, Foundation, Skeleton and so on for this project. Even though you may end up using frameworks like these professionally, you still need to know and be able to implement the designs with your own knowledge of HTML, CSS and JavaScript.

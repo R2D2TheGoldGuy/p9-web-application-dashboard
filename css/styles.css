@@ -60,13 +60,9 @@ canvas {
       flex-basis: 100%;
       width: 100%;
     }
-  }
-  @media only screen and (min-width: 768px) {
     .wrapper-daily-traffic, .wrapper-source-traffic, .wrapper-new-member, .wrapper-recent-activities, .wrapper-message, .wrapper-settings {
       flex: 0 50%;
     }
-  }
-  @media only screen and (min-width: 768px) {
     .wrapper-daily-traffic, .wrapper-new-member, .wrapper-message {
       border-right: 1px solid rgba(174, 168, 211, 0.45);
     }
@@ -146,7 +142,7 @@ canvas {
   }
   .top-logo {
     align-self: center;
-    margin-left: 30px;
+    margin-left: 25px;
     font-size: 1.625em;
   }
     @media only screen and (min-width: 768px) {
